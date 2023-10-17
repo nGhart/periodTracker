@@ -82,7 +82,7 @@
         }
         .addSection {
           position: absolute;
-          bottom: 0;
+          bottom: 7%;
           width: 340px;
           .addContainer {
             background-color: #fff;
@@ -110,6 +110,7 @@
         padding: 10px;
         width: 100%;
         display: flex;
+        display: none;
         justify-content: center;
         //z-index: 10;
         // background-color: $main-bg;
