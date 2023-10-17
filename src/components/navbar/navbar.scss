@@ -1,0 +1,16 @@
+@import '../../styles/variables.scss';
+.navigation {
+  height: 50px;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  background-color: $main-bg;
+  display: flex;
+  align-items: center;
+  z-index: 5;
+  h6 {
+    padding: 15px;
+    color: $main-color;
+  }
+}

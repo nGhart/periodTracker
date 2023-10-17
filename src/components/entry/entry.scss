@@ -1,0 +1,128 @@
+@import '../../styles/variables.scss';
+.entriesSection {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  height: 100%;
+  .entriesContainer {
+    width: 350px;
+    //padding: 5px;
+    background-color: $trans-bg;
+    border-radius: 10px;
+    position: relative;
+    box-shadow: 2px 2px 2px $trans-bg, 2px 3px 3px $colour-1;
+    .statsSection {
+      background-color: $colour-1;
+      border-top-right-radius: 10px;
+      border-top-left-radius: 10px;
+      padding: 5px;
+      display: flex;
+      //width: 100%;
+      justify-content: end;
+      button {
+        border: 2px solid $colour-2;
+        color: $main-bg;
+        padding: 5px;
+        border-radius: 20px;
+        font-weight: 700;
+        &:hover {
+          background-color: $colour-2;
+          color: #fff;
+        }
+      }
+    }
+    .filterContainer {
+      display: flex;
+      justify-content: space-evenly;
+      padding: 15px 0;
+    }
+    .everythingButHeader {
+      padding: 0 5px;
+      position: relative;
+      height: 100%;
+      .list {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 600px;
+        padding: 5px;
+        //display: none;
+        .startContainer {
+          text-align: center;
+          padding: 10px;
+          .startText {
+            color: rgb(255, 88, 116);
+            font-size: 20px;
+            font-weight: 800px;
+          }
+          .startDate {
+            color: $main-bg;
+            font-weight: 800;
+            font-size: 25px;
+          }
+        }
+        .singleSection {
+          .singleContainer {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 5px;
+            padding: 2px;
+            .month {
+              width: 30%;
+            }
+            .actual {
+              width: 30%;
+            }
+            .next {
+              width: 30%;
+            }
+          }
+        }
+        .addSection {
+          position: absolute;
+          bottom: 0;
+          width: 340px;
+          .addContainer {
+            background-color: #fff;
+            display: flex;
+            justify-content: space-evenly;
+            margin-bottom: 5px;
+            padding: 2px;
+            text-align: center;
+            .month {
+              width: 30%;
+            }
+            .actual {
+              width: 30%;
+            }
+            .next {
+              width: 30%;
+            }
+          }
+        }
+      }
+      .stats {
+        position: absolute;
+        top: 0;
+        left: 0;
+        padding: 10px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        //z-index: 10;
+        // background-color: $main-bg;
+        // height: 600px;
+        // height: 100%;
+        // width: 100%;
+        .statsContainer {
+          background-color: $trans-bg2;
+          width: 95%;
+          height: 90%;
+          padding: 5px;
+        }
+      }
+    }
+  }
+}

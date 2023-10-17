@@ -1,0 +1,11 @@
+@import '../../styles/variables.scss';
+.footer {
+  background-color: $main-bg;
+  text-align: center;
+  padding: 15px;
+  position: fixed;
+  bottom: 0;
+  //left: 0;
+  width: 100vw;
+  color: $main-color;
+}

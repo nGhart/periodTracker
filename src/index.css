@@ -1,0 +1,25 @@
+:root {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  font-synthesis: none;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+  background-color: #6468a4;
+  background: rgb(255, 192, 203);
+  background: linear-gradient(
+    144deg,
+    rgba(255, 192, 203, 1) 0%,
+    rgba(100, 104, 164, 1) 80%,
+    rgba(204, 202, 217, 1) 100% 0
+  ) !important;
+}
