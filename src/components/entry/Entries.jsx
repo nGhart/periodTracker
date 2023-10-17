@@ -7,10 +7,10 @@ import Form from './Form';
 const Entries = () => {
   const state = useSelector((state) => state.reducer.entries);
   let latest = state[state.length - 1].startDate;
-  let butThree = state[state.length - 4].startDate;
-  let butOne = state[3].startDate;
+  // let butThree = state[state.length - 4].startDate;
+  // let butOne = state[3].startDate;
 
-  let butFour = state[0].startDate;
+  // let butFour = state[0].startDate;
 
   function addDaysToDate(firstDate, daysToAdd) {
     const date = new Date(firstDate);
@@ -22,8 +22,8 @@ const Entries = () => {
     return formattedDate;
   }
 
-  const startDate = new Date(state[4].startDate);
-  const year = startDate.getUTCFullYear();
+  //const startDate = new Date(state[4].startDate);
+  //const year = startDate.getUTCFullYear();
   const years = [new Set(state.map((item) => item.startDate.slice(0, 4)))];
   const [yearEntries, setYearEntries] = useState(state);
   const [start, setStart] = useState('');
@@ -51,37 +51,37 @@ const Entries = () => {
   useEffect(() => {
     getFiltered();
   }, [start, end]);
-  function getAverageLength() {
-    let newLatest = new Date(latest);
-    let newButThree = new Date(butThree);
-    let timeDiff = new Date(newLatest) - new Date(newButThree);
-    let A = newLatest.getUTCMonth();
-    let B = newButThree.getUTCMonth();
-    console.log('a', A);
-    console.log('b', B);
-    let monthDiff = A - B;
-    if (monthDiff > 0) {
-      const aveLength = Math.floor(
-        timeDiff / (1000 * 60 * 60 * 24 * monthDiff)
-      );
-      return aveLength;
-    } else {
-      const aveLength = Math.floor(
-        timeDiff / (1000 * 60 * 60 * 24 * (monthDiff + 12))
-      );
-      return aveLength;
-    }
-  }
-  useEffect(() => {
-    getAverageLength();
-  }, [state]);
+  // function getAverageLength() {
+  //   let newLatest = new Date(latest);
+  //   let newButThree = new Date(butThree);
+  //   let timeDiff = new Date(newLatest) - new Date(newButThree);
+  //   let A = newLatest.getUTCMonth();
+  //   let B = newButThree.getUTCMonth();
+  //   console.log('a', A);
+  //   console.log('b', B);
+  //   let monthDiff = A - B;
+  //   if (monthDiff > 0) {
+  //     const aveLength = Math.floor(
+  //       timeDiff / (1000 * 60 * 60 * 24 * monthDiff)
+  //     );
+  //     return aveLength;
+  //   } else {
+  //     const aveLength = Math.floor(
+  //       timeDiff / (1000 * 60 * 60 * 24 * (monthDiff + 12))
+  //     );
+  //     return aveLength;
+  //   }
+  // }
+  // useEffect(() => {
+  //   getAverageLength();
+  // }, [state]);
 
   return (
     <>
       <div className="entriesSection">
         <div className="entriesContainer">
           <div className="statsSection">
-            <button>Entry</button>
+            {/* <button>Entry</button> */}
             <button>Statistics</button>
           </div>
 
@@ -114,9 +114,7 @@ const Entries = () => {
               <div className="startContainer">
                 <h1 className="startText">Your period should start on</h1>
                 {/* <h1 className="startDate">{addDaysToDate(latest, 28)}</h1> */}
-                <h1 className="startDate">
-                  {addDaysToDate(latest, getAverageLength())}
-                </h1>
+                <h1 className="startDate">{addDaysToDate(latest, 28)}</h1>
               </div>
               {yearEntries.map((item) => {
                 return <SingleEntry key={item.id} item={item} />;
@@ -124,11 +122,11 @@ const Entries = () => {
               <Form />
             </div>
             <div className="stats">
-              <div className="statsContainer">
+              {/* <div className="statsContainer">
                 <p>Last period start date: {latest}</p>
                 <p>Average cycle length: {getAverageLength()}</p>
                 <p>Average period duration: </p>
-              </div>
+              </div> */}
             </div>
           </div>
         </div>
